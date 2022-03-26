@@ -1,3 +1,8 @@
+// 좌표 배열을 생성한다
+// 각 좌표는 (왼, 오, 위, 아) 방향 bool 값을 갖는다
+// 좌표로 들어오는 방향과 보내는 방향을 true로 체크한다
+// 배열의 true 개수를 세고 들어오고 나가고 두번 체크되었으므로 반을 나눈다
+
 import Foundation
 
 func solution(_ dirs:String) -> Int {
