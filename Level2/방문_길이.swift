@@ -6,14 +6,8 @@ func solution(_ dirs:String) -> Int {
     var y = 5
     var result = 0
     
-    var arr = [Character]()
-
-    for i in dirs {
-        arr.append(i)
-    }
-    
-    for i in 0..<dirs.count {
-        switch arr[i] {
+    dirs.forEach {
+        switch $0 {
         case "L":
             if x > 0 {
                 x -= 1
