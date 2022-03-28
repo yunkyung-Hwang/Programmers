@@ -1,3 +1,22 @@
+// ver 2) 참고 풀이
+// 스킬트리중 선행 스킬만 필터링하고 // BACDE -> BD
+// starts를 이용하여 순서확인
+// 순서가 맞는 스킬트리의 개수 반환
+import Foundation
+
+func solution(_ skill:String, _ skill_trees:[String]) -> Int {
+    // available의 결과가 true인 개수
+    return skill_trees.map { available(skill, $0) }.filter { $0 }.count
+}
+
+func available(_ s: String, _ t: String) -> Bool {
+    // 스킬트리 중 선행스킬들의 모음
+    let alza = t.filter { s.contains($0) }
+    // starts: 시퀀스의 초기 요소(possiblePrefix)가 다른 시퀀스의 요소와 동일한지 여부를 나타내는 부울 값을 반환
+    return s.starts(with: alza)
+}
+
+
 // ver 1) 제시된 조건 상 시간복잡도 신경 안써도 될 것 같아 직관적으로 작성한 풀이
 // 각 스킬트리를 체크한다
 // 선행 스킬일 경우 선행여부를 따진다
@@ -7,6 +26,7 @@
 // - 스킬트리중 선행스킬들만 담고있는 tmp문자열과 선행스킬 문자열을 해당 길이까지 비교한다
 // 맞는 스킬트리면 result를 1 증가하고 다음 스킬트리를 확인한다
 
+/*
 import Foundation
 
 func solution(_ skill:String, _ skill_trees:[String]) -> Int {
@@ -38,3 +58,4 @@ func solution(_ skill:String, _ skill_trees:[String]) -> Int {
     }
     return result
 }
+*/
