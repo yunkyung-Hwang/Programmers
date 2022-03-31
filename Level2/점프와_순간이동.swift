@@ -17,7 +17,27 @@ func solution(_ n:Int) -> Int
         } else {
             tmp /= 2
         }
+        
+        /*
+        if tmp % 2 == 1 {
+            ans += 1
+        }
+        // 어차피 int형이라 1 안빼도 알아서 버려짐
+        tmp /= 2
+        */
     }
 
     return ans
 }
+
+// ver2)
+/*
+import Foundation
+
+func solution(_ n:Int) -> Int
+{
+    if n == 1 { return 1 }
+    if n % 2 == 0 { return solution(n/2) }
+    return solution(n/2) + 1
+}
+*/
