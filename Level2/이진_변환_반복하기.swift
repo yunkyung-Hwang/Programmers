@@ -16,3 +16,24 @@ func solution(_ s:String) -> [Int] {
         return solution(num)
     }
 }
+
+
+//ver2) filter 사용
+/*
+import Foundation
+
+func solution(_ s:String) -> [Int] {
+    var num: String = s
+    var result = [0,0]
+    
+    while num != "1" {
+        result[0] += 1
+        num = String(num.filter{
+            if $0 == "0" { result[1] += 1 }
+            return $0 != "0"
+        }.count, radix: 2)
+    }
+    
+    return result
+}
+*/
