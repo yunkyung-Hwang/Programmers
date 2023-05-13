@@ -11,6 +11,7 @@
 // - 냅다 정렬해서 잘라도 안됨. 타는 시간 봐야댐
 // - 9시에 줄 선 사람이 4명이고 한 번에 탈 수 있는 사람 수가 2명이면 9시에 온 애들도 다음 버스 타야댐
 // - 가장 빠른 시간에 타는 계산(onboardTime) 한 번 틀림
+// - 22번 반례는 24:00 입력이 아니라 얘였따 https://school.programmers.co.kr/questions/28543
 
 func minuteToTime(_ minute: Int) -> String {
     let h = String(format: "%02d", minute / 60)
